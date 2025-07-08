@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Access</title>
+<style>
+body {
+    display: flex;
+    flex-direction: column; /* Ensures h1 stays at the top */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.button {
+/* Added margin to separate button from header */
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ef3050;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    font-family: Impact, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, sans-serif; /* Fixed typo in 'Font-family' */
+    color: rgb(187, 255, 0);
+    font-size: 65px; /* let color to white */
+}
+body{
+    background-image: url('01.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: 
+      url("https://e1.pxfuel.com/desktop-wallpaper/626/654/desktop-wallpaper-laser-lines-abstract-laser-lines.jpg");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+</style>
+</head>
+<body>
+    
+<h1 class="fancy">OBJECT MOTION DETECTOR</h1> <!-- Added h1 header here -->
+
+     
+     
+     <button class="button" onclick="startMotionDetection()">Start Camera</button>
+     <h2 class="fancy">
+      Click on the above button to start project</h2>
+     <h1 class="fancy">ADVANCED MACHINE LEARNING PROJECT</p>
+      
+      
+        
+      
+<script>
+function startMotionDetection() {
+    // Execute Python program
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost:8000/start_motion_detection", true);
+    xhr.send();
+}
+</script>
+</body>
+</html>
+
